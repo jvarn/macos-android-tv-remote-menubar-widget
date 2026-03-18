@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# 1. Get the directory where this script is currently running
+SCRIPT_DIR=$(dirname "$0")
+
+# 2. Identify the target user and their home directory
+CURRENT_USER=$(stat -f "%Su" /dev/console)
+USER_HOME=$(dscl . -read /Users/"$CURRENT_USER" NFSHomeDirectory | awk '{print $2}')
+
+# 3. Define the destination
+TARGET_DIR="$USER_HOME/Library/Application Support/TVVolume"
+
+# 4. Create destination if needed
+mkdir -p "$TARGET_DIR"
+
+# 5. Copy the files from the internal script resources to the target
+# We use SCRIPT_DIR to find the source files hidden inside the PKG
+cp -R "$SCRIPT_DIR/"* "$TARGET_DIR/"
+cp -R "$SCRIPT_DIR/.venv" "$TARGET_DIR/"
+
+# 6. Fix ownership for the user
+chown -R "$CURRENT_USER":staff "$TARGET_DIR"
+
+exit 0
