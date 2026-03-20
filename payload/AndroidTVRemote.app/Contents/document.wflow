@@ -59,18 +59,18 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>COMMAND_STRING</key>
-					<string>APP_PATH="$HOME/Library/Application Support/TVVolume"
+					<string>APP_PATH="$HOME/Library/Application Support/AndroidTVRemote"
 PYTHON_EXECUTABLE="$APP_PATH/.venv/bin/python3"
-PYTHON_SCRIPT="$APP_PATH/tvvolume.py"
+PYTHON_SCRIPT="$APP_PATH/tvremote.py"
 
 cd "$APP_PATH"
-"$PYTHON_EXECUTABLE" "tvvolume.py" &gt; /dev/null 2&gt;&amp;1 &amp;</string>
+"$PYTHON_EXECUTABLE" "tvremote.py" &gt; /dev/null 2&gt;&amp;1 &amp;</string>
 					<key>CheckedForUserDefaultShell</key>
 					<true/>
 					<key>inputMethod</key>
 					<integer>1</integer>
 					<key>shell</key>
-					<string>/bin/bash</string>
+					<string>/bin/zsh</string>
 					<key>source</key>
 					<string></string>
 				</dict>
@@ -89,7 +89,7 @@ cd "$APP_PATH"
 				<key>Class Name</key>
 				<string>RunShellScriptAction</string>
 				<key>InputUUID</key>
-				<string>98C95DC1-DDFF-4644-8A7E-2C8338D67F2E</string>
+				<string>8D961A49-3532-4828-BD83-5949065227A7</string>
 				<key>Keywords</key>
 				<array>
 					<string>Shell</string>
@@ -99,9 +99,9 @@ cd "$APP_PATH"
 					<string>Unix</string>
 				</array>
 				<key>OutputUUID</key>
-				<string>46D03CAB-06B0-414D-95A0-FF5D813D85AB</string>
+				<string>916BB920-18D7-471F-8D58-8937F38C7262</string>
 				<key>UUID</key>
-				<string>D8ADE6D8-E2CB-4E86-8BBE-41AA548589C0</string>
+				<string>232568B9-0E13-4A8C-AF04-7992F0A9C0DD</string>
 				<key>UnlocalizedApplications</key>
 				<array>
 					<string>Automator</string>
@@ -177,7 +177,7 @@ cd "$APP_PATH"
 				<key>isViewVisible</key>
 				<integer>1</integer>
 				<key>location</key>
-				<string>537.500000:436.000000</string>
+				<string>537.500000:636.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>

@@ -32,15 +32,15 @@
 	<key>CFBundleExecutable</key>
 	<string>Automator Application Stub</string>
 	<key>CFBundleIconFile</key>
-	<string>AppIcon</string>
+	<string>ApplicationStub</string>
 	<key>CFBundleIconName</key>
-	<string>AppIcon</string>
+	<string>ApplicationStub</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.jvarn.TVVolumeApp</string>
+	<string>com.apple.automator.AndroidTVRemote</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>TVVolumeApp</string>
+	<string>AndroidTVRemote</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
