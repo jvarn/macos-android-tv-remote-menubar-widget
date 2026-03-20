@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # macOS Android TV Remote Menubar Widget
 This app uses [androidtvremote2](https://github.com/tronikos/androidtvremote2) and a custom Python script to create a remote control menu bar widget for Android TVs. This has only been tested on a *TCL Percee TV* running Android 8. If you have a different model of Android television, you may need to modify `tvremote.py`.
 
