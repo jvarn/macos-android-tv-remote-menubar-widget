@@ -1,5 +1,6 @@
+<<<<<<< HEAD
 # macOS Android TV Remote Menubar Widget
-This app uses `https://github.com/tronikos/androidtvremote2` and a custom Python script to create a remote control menu bar widget for Android TVs. This has only been tested on a *TCL Percee TV* running Android 8. If you have a different model of Android television, you may need to modify `tvremote.py`.
+This app uses [androidtvremote2](https://github.com/tronikos/androidtvremote2) and a custom Python script to create a remote control menu bar widget for Android TVs. This has only been tested on a *TCL Percee TV* running Android 8. If you have a different model of Android television, you may need to modify `tvremote.py`.
 
 ## Installation
 Download the installer from the [releases page](https://github.com/jvarn/macos-android-tv-remote-menubar-widget/releases/latest).
@@ -40,11 +41,7 @@ The only part that contains a pre-compiled binary is the Automator app at `paylo
 
 If you want to build the whole thing yourself from scratch, then follow the instructions below.
 
-1. Create a new working folder with required sub-folders, e.g.:
-	```sh
-	mkdir -p ~/scripts/AndroidTVRemote/scripts && mkdir ~/scripts/payload && mkdir ~/scripts/built && cd ~/scripts/AndroidTVRemote
-	```
-2. Install dependencies – adapted from: [installation instructions](https://github.com/tronikos/androidtvremote2#development-environment).
+1. Install dependencies – adapted from: [installation instructions](https://github.com/tronikos/androidtvremote2#development-environment).
 	```sh
 		brew install portaudio python3
 	
@@ -72,10 +69,10 @@ If you want to build the whole thing yourself from scratch, then follow the inst
 		
 		curl -LJO https://raw.githubusercontent.com/jvarn/macos-android-tv-remote-menubar-widget/refs/heads/main/scripts/tvremote.py
 	```
-3. Create a new Application in Automator.
-4. Add "Run Shell Script".
-5. Set Pass input to "as arguments" and Shell to "/bin/bash".
-6. Paste the following script:
+2. Create a new Application in Automator.
+3. Add "Run Shell Script".
+4. Set Pass input to "as arguments" and Shell to "/bin/bash".
+5. Paste the following script:
 ```sh
 	APP_PATH="$HOME/Library/Application Support/AndroidTVRemote"
 	PYTHON_EXECUTABLE="$APP_PATH/.venv/bin/python3"
@@ -92,4 +89,4 @@ If you want to build the whole thing yourself from scratch, then follow the inst
 		plutil -replace CFBundleIconFile -string "AppIcon" payload/AndroidTVRemote.app/Contents/Info.plist
 		plutil -replace CFBundleIconName -string "AppIcon" payload/AndroidTVRemote.app/Contents/Info.plist
 	```
-10. Move or copy the app into your Applications folder.
+9. Move or copy the app into your Applications folder.
