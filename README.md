@@ -57,8 +57,8 @@ If you want to build the whole thing yourself from scratch, then follow the inst
 		python -m pip install grpcio-tools mypy-protobuf
 		python -m grpc_tools.protoc androidtvremote2/src/androidtvremote2/*.proto --python_out=androidtvremote2/src/androidtvremote2 --mypy_out=androidtvremote2/src/androidtvremote2 -Iandroidtvremote2/src/androidtvremote2
 		python -m pip install pre-commit
-		pre-commit install
-		pre-commit run --all-files
+		pre-commit install --git-dir="$WORKINGDIR/.git" --config="androidtvremote2/.pre-commit-config.yaml"
+		pre-commit run --all-files --config="androidtvremote2/.pre-commit-config.yaml"
 		
 		python -m pip install -e "./androidtvremote2[test]"
 		pytest
@@ -66,7 +66,14 @@ If you want to build the whole thing yourself from scratch, then follow the inst
 		python -m pip install build
 		python -m build ./androidtvremote2
 		
-		curl -LJO https://raw.githubusercontent.com/jvarn/macos-android-tv-remote-menubar-widget/refs/heads/main/scripts/tvremote.py
+		curl -LJO  https://raw.githubusercontent.com/jvarn/macos-android-tv-remote-menubar-widget/refs/heads/main/scripts/payload_appsupport/tvremote.py
+		curl -LJO  https://raw.githubusercontent.com/jvarn/macos-android-tv-remote-menubar-widget/refs/heads/main/scripts/payload_appsupport/tvremotecli.py
+		curl -LJO  https://raw.githubusercontent.com/jvarn/macos-android-tv-remote-menubar-widget/refs/heads/main/scripts/payload_appsupport/tvremotecli.sh
+		
+		chmod +x tvremote*
+		
+		# test and pair
+		./tvremotecli.sh --volume up
 	```
 2. Create a new Application in Automator.
 3. Add "Run Shell Script".
